@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me — Kalpesh's Journal</title>
+    <meta name="description" content="Get to know Kalpesh, a software developer passionate about building clean interfaces, design systems, and thoughtful engineering.">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo" id="header-logo">
+                Kalpesh<span class="logo-dot"></span>
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                </ul>
+            </nav>
+            
+            <div class="controls">
+                <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="section" id="about-section">
+            <div class="about-wrapper">
+                <div class="about-img-box">
+                    <img src="images/about.jpg" alt="Kalpesh profile avatar" id="about-img">
+                </div>
+                
+                <div class="about-content">
+                    <span class="post-meta-tag">Hello World</span>
+                    <h2>Hi, I'm Kalpesh.</h2>
+                    <p>I am a software engineer and designer based in India. I enjoy building things that live on the web, focusing on clean code, responsive interfaces, and seamless user experiences.</p>
+                    <p>Currently, my focus is on optimization, design systems, and building robust tooling. I believe that good design isn't just how something looks, but how it works under the hood.</p>
+                    <p>When I'm not writing code or tweaking CSS custom properties, you can find me hiking, exploring new books on philosophy, or experimenting with camera setups.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h4 id="stat-projects">12+</h4>
+                            <p>Projects Shipped</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 id="stat-commits">1.2k+</h4>
+                            <p>Git Commits</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 id="stat-coffee">500+</h4>
+                            <p>Cups of Coffee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Form Section -->
+        <section class="section" id="contact-section">
+            <div class="section-title-wrap">
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
+            
+            <div class="newsletter-section" style="max-width: 700px; text-align: left; padding: 3rem;">
+                <p style="margin-bottom: 2rem;">Have a project in mind or just want to chat? Drop me a message below and I'll get back to you as soon as possible.</p>
+                
+                <form id="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully!'); this.reset();" style="display: flex; flex-direction: column; gap: 1.25rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <input type="text" class="newsletter-input" id="contact-name" placeholder="Name" required style="width: 100%;">
+                        <input type="email" class="newsletter-input" id="contact-email" placeholder="Email" required style="width: 100%;">
+                    </div>
+                    <textarea class="newsletter-input" id="contact-message" placeholder="Your Message" rows="5" required style="width: 100%; font-family: var(--font-sans); resize: vertical;"></textarea>
+                    <button type="submit" class="btn-primary" style="align-self: flex-start;">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <p>&copy; 2026 Kalpesh. Built with Vanilla HTML, CSS & JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing the Future: The Magic of Glassmorphism — Kalpesh's Journal</title>
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="../index.html" class="logo" id="header-logo">
+                Kalpesh<span class="logo-dot"></span>
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+            
+            <div class="controls">
+                <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <article class="section" id="article-section">
+            
+            <header class="article-header">
+                <span class="post-meta-tag">Design</span>
+                <h1 id="article-title">Designing the Future: The Magic of Glassmorphic Interfaces</h1>
+                <div class="meta-info">
+                    <span class="meta-author">Kalpesh</span>
+                    <span class="meta-dot">&bull;</span>
+                    <span class="meta-date">June 24, 2026</span>
+                    <span class="meta-dot">&bull;</span>
+                    <span class="meta-read">4 min read</span>
+                </div>
+            </header>
+
+            <div class="article-hero-img">
+                <img src="../images/post1.jpg" alt="Abstract gradient waves" id="article-hero-image">
+            </div>
+
+            <div class="article-body" id="article-content">
+                <p>Web design trends cycle through periods of intense realism and stark flat geometry. Today, we are seeing the emergence of a middle ground that balances modern depth with digital clarity. This style is often referred to as <strong>Glassmorphism</strong>.</p>
+                
+                <p>Characterized by translucent card layers, smooth backdrop blurs, and thin borders simulating light reflections, glassmorphism creates a virtual hierarchy that mimics real physical materials.</p>
+
+                <h2>How It Works under the Hood</h2>
+                <p>Creating this effect natively in modern CSS is surprisingly straightforward, relying on the `backdrop-filter` property. Unlike simple opacity, `backdrop-filter` applies styling directly to whatever elements sit beneath the container:</p>
+
+                <pre><code>.glass-card {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+}</code></pre>
+
+                <h2>The Three Pillars of Glassmorphism</h2>
+                <ul>
+                    <li><strong>Translucency:</strong> A semi-transparent background color (usually white or black with low opacity) that lets underlying colors peek through.</li>
+                    <li><strong>Backdrop Blur:</strong> A blur effect applied to the pixels directly underneath, which ensures readability of text regardless of background patterns.</li>
+                    <li><strong>Light Borders:</strong> A very thin, light border that defines the container shape and acts as a specular reflection edge.</li>
+                </ul>
+
+                <blockquote>
+                    "Material interfaces give the user a tactile understanding of hierarchy. When elements blur what is behind them, we instantly understand their position in the stack."
+                </blockquote>
+
+                <p>When used sparingly, glassmorphism elevates a standard interface into something tactile, interactive, and premium.</p>
+            </div>
+            
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+            <p>&copy; 2026 Kalpesh. Built with Vanilla HTML, CSS & JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
