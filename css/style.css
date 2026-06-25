@@ -51,6 +51,10 @@
 }
 
 /* --- Base & Reset Styles --- */
+html {
+    scroll-padding-top: 5rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -96,7 +100,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: rgba(var(--bg-primary), 0.8);
+    background-color: var(--bg-primary);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
@@ -432,19 +436,24 @@ header.sticky-scrolled {
 }
 
 /* --- Post Article Page --- */
+#article-section {
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
+}
+
 .article-header {
     text-align: center;
-    padding: 4rem 0 2rem 0;
-    max-width: 800px;
+    padding: 0 0 2.5rem 0;
+    max-width: 760px;
     margin: 0 auto;
 }
 
 .article-header h1 {
     font-family: var(--font-serif);
-    font-size: 3.25rem;
-    line-height: 1.15;
-    margin-bottom: 1.5rem;
-    letter-spacing: -1px;
+    font-size: 2.75rem;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.5px;
 }
 
 .article-header .meta-info {
@@ -455,33 +464,41 @@ header.sticky-scrolled {
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow);
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
 }
 
 .article-hero-img img {
     width: 100%;
-    max-height: 500px;
+    max-height: 420px;
     object-fit: cover;
 }
 
 .article-body {
-    max-width: 740px;
+    max-width: 680px;
     margin: 0 auto;
-    font-size: 1.125rem;
-    line-height: 1.8;
+    font-size: 1.075rem;
+    line-height: 1.75;
     color: var(--text-secondary);
 }
 
 .article-body p {
-    margin-bottom: 1.75rem;
+    margin-bottom: 1rem;
 }
 
-.article-body h2, 
+.article-body p + p {
+    margin-top: 0;
+}
+
+.article-body p:has(em):not(:has(strong)) {
+    margin-bottom: 0.4rem;
+}
+
+.article-body h2,
 .article-body h3 {
     color: var(--text-primary);
     font-weight: 700;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
+    margin-top: 2.25rem;
+    margin-bottom: 0.75rem;
 }
 
 .article-body h2 {
